@@ -14,3 +14,16 @@ class Solution:
         #                 nums[j]=temp
         #                 break
         # print(nums)
+
+        
+        
+        for i in range(len(nums)):
+            if nums[i]!=0:
+                temp.append(nums[i])
+        # print(temp)
+        for j in range(len(nums)-len(temp)):
+            temp.append(0)
+        print(temp)
+        for i in range(len(nums)):
+            nums[i]=temp[i]
+        
