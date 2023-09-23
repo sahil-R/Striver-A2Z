@@ -41,5 +41,14 @@ class Solution:
                     nums[i]=nums[j]
                     nums[j]=temp
                     j+=1
-                
-
+#Working of the method
+# 0,1,2,3,4,5,6,7,8,9,10               
+# 5,6,7,0,3,4,0,0,4,5,6
+# i will search for 0 to assign it to j so j will be 3
+# now going forward i will start form 4 will swap 3 with 0 since it is not 0
+# 5,6,7,3,0,4,0,0,4,5,6
+# next swap will be like
+# 5,6,7,3,4,0,0,0,4,5,6
+# 5,6,7,3,4,4,0,0,0,5,6
+# 5,6,7,3,4,4,5,0,0,0,6
+# 5,6,7,3,4,4,5,6,0,0,0
