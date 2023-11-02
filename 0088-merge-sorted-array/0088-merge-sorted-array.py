@@ -3,23 +3,16 @@ class Solution:
         """
         Do not return anything, modify nums1 in-place instead.
         """
-        new=[]
-        p1=0
-        p2=0
-        while p1<m and p2<n:
-            if nums1[p1]<=nums2[p2]:
-                new.append(nums1[p1])
-                p1+=1
-            if nums1[p1]>nums2[p2]:
-                new.append(nums2[p2])
-                p2+=1
+        i=m-1
+        j=n-1 
+        k=m+n-1
+        while j>=0:
+            if i>=0 and nums1[i]>=nums2[j]:
+                nums1[k]=nums1[i]
+                i-=1
+                k-=1
+            else:
+                nums1[k]=nums2[j]
+                j-=1
+                k-=1
         
-        while p1!=m:
-            new.append(nums1[p1])
-            p1+=1
-        while p2!=n:
-            new.append(nums2[p2])
-            p2+=1
-        
-        for i in range(len(new)):
-            nums1[i]=new[i]
